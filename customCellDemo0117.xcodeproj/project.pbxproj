@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95DAB16D1E2FF2BD0073C8F2 /* BirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB16C1E2FF2BD0073C8F2 /* BirdCell.swift */; };
+		95DAB16F1E2FF5940073C8F2 /* Delegations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB16E1E2FF5940073C8F2 /* Delegations.swift */; };
 		95F00FB21E2F3D32009E6676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00FB11E2F3D32009E6676 /* AppDelegate.swift */; };
-		95F00FB41E2F3D32009E6676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00FB31E2F3D32009E6676 /* ViewController.swift */; };
+		95F00FB41E2F3D32009E6676 /* BirdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F00FB31E2F3D32009E6676 /* BirdListViewController.swift */; };
 		95F00FB71E2F3D32009E6676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F00FB51E2F3D32009E6676 /* Main.storyboard */; };
 		95F00FBA1E2F3D32009E6676 /* customCellDemo0117.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F00FB81E2F3D32009E6676 /* customCellDemo0117.xcdatamodeld */; };
 		95F00FBC1E2F3D32009E6676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F00FBB1E2F3D32009E6676 /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95DAB16C1E2FF2BD0073C8F2 /* BirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdCell.swift; sourceTree = "<group>"; };
+		95DAB16E1E2FF5940073C8F2 /* Delegations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegations.swift; sourceTree = "<group>"; };
 		95F00FAE1E2F3D32009E6676 /* customCellDemo0117.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customCellDemo0117.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F00FB11E2F3D32009E6676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95F00FB31E2F3D32009E6676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95F00FB31E2F3D32009E6676 /* BirdListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdListViewController.swift; sourceTree = "<group>"; };
 		95F00FB61E2F3D32009E6676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95F00FB91E2F3D32009E6676 /* customCellDemo0117.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = customCellDemo0117.xcdatamodel; sourceTree = "<group>"; };
 		95F00FBB1E2F3D32009E6676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				95F00FB11E2F3D32009E6676 /* AppDelegate.swift */,
-				95F00FB31E2F3D32009E6676 /* ViewController.swift */,
+				95F00FB31E2F3D32009E6676 /* BirdListViewController.swift */,
 				95F00FB51E2F3D32009E6676 /* Main.storyboard */,
 				95F00FBB1E2F3D32009E6676 /* Assets.xcassets */,
 				95F00FBD1E2F3D32009E6676 /* LaunchScreen.storyboard */,
 				95F00FC01E2F3D32009E6676 /* Info.plist */,
 				95F00FB81E2F3D32009E6676 /* customCellDemo0117.xcdatamodeld */,
+				95DAB16C1E2FF2BD0073C8F2 /* BirdCell.swift */,
+				95DAB16E1E2FF5940073C8F2 /* Delegations.swift */,
 			);
 			path = customCellDemo0117;
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F00FB41E2F3D32009E6676 /* ViewController.swift in Sources */,
+				95F00FB41E2F3D32009E6676 /* BirdListViewController.swift in Sources */,
 				95F00FBA1E2F3D32009E6676 /* customCellDemo0117.xcdatamodeld in Sources */,
+				95DAB16D1E2FF2BD0073C8F2 /* BirdCell.swift in Sources */,
 				95F00FB21E2F3D32009E6676 /* AppDelegate.swift in Sources */,
+				95DAB16F1E2FF5940073C8F2 /* Delegations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +526,7 @@
 				95F00FDB1E2F3D33009E6676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95F00FDC1E2F3D33009E6676 /* Build configuration list for PBXNativeTarget "customCellDemo0117Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +535,7 @@
 				95F00FDE1E2F3D33009E6676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95F00FDF1E2F3D33009E6676 /* Build configuration list for PBXNativeTarget "customCellDemo0117UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +544,7 @@
 				95F00FE11E2F3D33009E6676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

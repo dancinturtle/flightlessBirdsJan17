@@ -1,26 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="drv-zT-vSB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Bird List View Controller-->
+        <scene sceneID="yzq-FX-cUn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="4Bf-ro-X9g" customClass="BirdListViewController" customModule="customCellDemo0117" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="pl0-cy-gea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="birdCell" id="QLW-5y-nbi" customClass="BirdCell" customModule="customCellDemo0117" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QLW-5y-nbi" id="1KH-I8-xgF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cnl-x2-FZ1">
+                                            <rect key="frame" x="84" y="16" width="221" height="167.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My bird is a cassowary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBg-5G-3MR">
+                                            <rect key="frame" x="16" y="78.5" width="60" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Yt7-We-9Ou"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xYS-BE-s7o">
+                                            <rect key="frame" x="313" y="85" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="KGo-E1-2yh"/>
+                                                <constraint firstAttribute="height" constant="30" id="wyA-tY-qya"/>
+                                            </constraints>
+                                            <state key="normal" title="Show my bird!"/>
+                                            <connections>
+                                                <action selector="birdButtonPressed:" destination="QLW-5y-nbi" eventType="touchUpInside" id="b51-JT-IK5"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EBg-5G-3MR" firstAttribute="leading" secondItem="1KH-I8-xgF" secondAttribute="leadingMargin" constant="8" id="0z7-er-HUt"/>
+                                        <constraint firstItem="Cnl-x2-FZ1" firstAttribute="leading" secondItem="EBg-5G-3MR" secondAttribute="trailing" constant="8" id="T3A-x7-AbE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Cnl-x2-FZ1" secondAttribute="bottom" constant="8" id="Tj1-tQ-hXL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xYS-BE-s7o" secondAttribute="trailing" constant="8" id="VwY-CA-1M9"/>
+                                        <constraint firstItem="Cnl-x2-FZ1" firstAttribute="top" secondItem="1KH-I8-xgF" secondAttribute="topMargin" constant="8" id="W0I-X6-OEt"/>
+                                        <constraint firstItem="xYS-BE-s7o" firstAttribute="leading" secondItem="Cnl-x2-FZ1" secondAttribute="trailing" constant="8" id="jzm-de-fmQ"/>
+                                        <constraint firstItem="EBg-5G-3MR" firstAttribute="centerY" secondItem="1KH-I8-xgF" secondAttribute="centerY" id="svP-hQ-Bxx"/>
+                                        <constraint firstItem="xYS-BE-s7o" firstAttribute="centerY" secondItem="1KH-I8-xgF" secondAttribute="centerY" id="vFN-Iq-ZC5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="birdButton" destination="xYS-BE-s7o" id="cwq-Bj-eTy"/>
+                                    <outlet property="birdImage" destination="Cnl-x2-FZ1" id="gVW-fH-0Gr"/>
+                                    <outlet property="birdLabel" destination="EBg-5G-3MR" id="oWu-y1-KCB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Bf-ro-X9g" id="WdC-1Z-r9V"/>
+                            <outlet property="delegate" destination="4Bf-ro-X9g" id="mXJ-OU-zWz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Hg9-ng-oX6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJb-Up-YWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mh7-Om-GJv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="drv-zT-vSB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="alx-CV-VVm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Bf-ro-X9g" kind="relationship" relationship="rootViewController" id="lUE-lk-bWJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOt-kl-zjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.399999999999999" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>
